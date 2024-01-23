@@ -1,0 +1,106 @@
+#root {
+  margin: 0 auto;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.sidebar {
+  width: 280px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.song {
+  display: flex;
+}
+
+.song button {
+  border: none;
+  background-color: transparent;
+}
+
+.songName {
+  flex-grow: 1;
+}
+
+#description-playlist{
+
+  margin-left: 50px;
+ font-style: italic;
+}
+
+#playlist-header {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#playlist-header button {
+
+  width: 120px;
+  height: 50px;
+  padding: 0;
+}
+
+#work-in-progress {
+
+  margin-left: 100px;
+}
+
+#title{
+
+  font-size: 50px;
+}
+
+.subtitle {
+
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#button-div {
+
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+ #h1-div {
+
+  margin-bottom: 50px;
+}
+
+#welcome-message {
+
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+#editCssButton {
+
+  width: 50px !important;
+  height: 50px !important;
+}
+
+#divButtonPlaylist {
+
+  display: flex !important;
+  gap: 50px !important;
+}
+#createPlaylistDiv {
+
+  display: flex;
+  flex-direction: column;
+}

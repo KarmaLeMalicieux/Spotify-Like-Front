@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 40px;
+}
+
+form button {
+
+width: 100px;
+  height: 50px;
+}
+
+#createPlaylistDiv {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
