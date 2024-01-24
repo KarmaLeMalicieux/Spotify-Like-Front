@@ -22,17 +22,19 @@ main {
   padding-right: 10px;
 }
 
-.song {
+.liBigBg {
+
+  margin-top: 10px;
   display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: azure;
+  border-radius: 15px;
 }
 
 .song button {
   border: none;
   background-color: transparent;
-}
-
-.songName {
-  flex-grow: 1;
 }
 
 #description-playlist{
@@ -103,4 +105,50 @@ main {
 
   display: flex;
   flex-direction: column;
+}
+
+#AddSongToPlauylist_Main_Div{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#songListWhenAdding{
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+}
+
+#songlist {
+
+  display: flex;
+  gap: 20px;
+  width: 600px;
+}
+#showSongList {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#showSongList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  width: 600px;
+  border-radius: 15px;
+}
+
+#showSongList li button {
+
+  background-color: transparent;
+  border: none;
 }

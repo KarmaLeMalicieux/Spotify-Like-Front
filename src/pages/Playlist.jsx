@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
@@ -36,8 +37,9 @@ function Playlist() {
       });
   };
 
-  const handleDeletePlaylistFromPlaylists = (playlistId) => {
-    console.log("t'es beau", playlistId)
+  const handleDeletePlaylistFromPlaylists = async (playlistId) => {
+    const response = await axios.delete(`http://localhost:1234/playlists/${playlistId}/delete`)
+    window.location.reload();
   }
   return (
     <div>
@@ -51,19 +53,17 @@ function Playlist() {
       <hr />
       <p id='description-playlist'> {playlistDesc} </p>
       <hr />
-      <ul className="list-group">
+      <ul className="list-group" id='showSongList'>
         {songs.map((song) => (
-          <li key={song._id} className="list-group-item">
-            <div className="song">
-              <span className="songName">{song.title}</span>
-              <button
-                onClick={() => {
-                  handleDeleteSongFromPlaylist(song._id);
-                }}
-              >
-                ❌
-              </button>
-            </div>
+          <li key={song._id} className="list-group-item" >
+            {song.title}
+            <button
+              onClick={() => {
+                handleDeleteSongFromPlaylist(song._id);
+              }}
+            >
+              ❌
+            </button>
           </li>
         ))}
       </ul>

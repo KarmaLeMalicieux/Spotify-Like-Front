@@ -11,16 +11,16 @@ function Home() {
       });
   }, []);
   return (
-    <div>
+    <div id="AddSongToPlauylist_Main_Div">
       <h1> Your Musics  </h1>
-      <hr />
+
       <br />
-      <ul className="list-group">
+      <ul className="list-group" id='songlist'>
         {allSongs.map((song) => (
-          <li key={song._id} className="list-group-item">
-            <div className="song">
-              <span className="songName">{song.title}</span>
-            </div>
+          <li key={song._id} className="list-group-item liBigBg">
+
+            {song.title}
+
           </li>
         ))}
       </ul>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
+
   const navigate = useNavigate()
   const [userLogined, setuserLogined] = useState({
     email: "",
@@ -37,6 +38,7 @@ function Login() {
             } required />
         </div>
         <button type="submit" className="btn btn-primary">Login</button>
+
       </form>
 
     </div>
